@@ -1,21 +1,26 @@
-using UnityEngine;
+﻿using UnityEngine;
 using VRStandardAssets.Utils;
 
 namespace VRStandardAssets.Examples
 {
     // This script is a simple example of how an interactive item can
     // be used to change things on gameobjects by handling events.
-    public class ExampleInteractiveItem : MonoBehaviour
+    public class ButtonHandler : MonoBehaviour
     {
-        [SerializeField] private Material m_NormalMaterial;                
-        [SerializeField] private Material m_OverMaterial;                  
-        [SerializeField] private Material m_ClickedMaterial;               
-        [SerializeField] private Material m_DoubleClickedMaterial;         
-        [SerializeField] private VRInteractiveItem m_InteractiveItem;
-        [SerializeField] private Renderer m_Renderer;
-        public GameObject menu;
+        [SerializeField]
+        private Material m_NormalMaterial;
+        [SerializeField]
+        private Material m_OverMaterial;
+        [SerializeField]
+        private Material m_ClickedMaterial;
+        [SerializeField]
+        private Material m_DoubleClickedMaterial;
+        [SerializeField]
+        private VRInteractiveItem m_InteractiveItem;
+        [SerializeField]
+        private Renderer m_Renderer;
 
-        private void Awake ()
+        private void Awake()
         {
             m_Renderer.material = m_NormalMaterial;
         }
@@ -60,10 +65,8 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show click state");
             m_Renderer.material = m_ClickedMaterial;
+            Destroy(transform.parent.gameObject);
 
-            Instantiate(menu, new Vector3(-2, 1.5f, -2), Quaternion.Euler(0, -45, 0), this.transform);
-
-            gameObject.GetComponent<Initialisation>().move = true;
         }
 
 

@@ -362,13 +362,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NormalMaterial: {fileID: 2100000, guid: fdc3c11723354144dbf34cde07fed0b3, type: 2}
-  m_OverMaterial: {fileID: 2100000, guid: fdc3c11723354144dbf34cde07fed0b3, type: 2}
-  m_ClickedMaterial: {fileID: 2100000, guid: c7569fba9e0e2fc40b3de03cd2e6b6d8, type: 2}
-  m_DoubleClickedMaterial: {fileID: 2100000, guid: c7569fba9e0e2fc40b3de03cd2e6b6d8,
+  m_OverMaterial: {fileID: 2100000, guid: c7569fba9e0e2fc40b3de03cd2e6b6d8, type: 2}
+  m_ClickedMaterial: {fileID: 2100000, guid: d9e6a8c3b79a0ac4d8e9776bb25bfa16, type: 2}
+  m_DoubleClickedMaterial: {fileID: 2100000, guid: 6c24bafebfdd8d5409c9b756aad7b191,
     type: 2}
   m_InteractiveItem: {fileID: 114060116185979696}
   m_Renderer: {fileID: 23232500290085794}
-  movementSpeed: 10
 --- !u!114 &114749487395332802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -382,6 +381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   A: {fileID: 114201405001410836}
   B: {fileID: 114981733484444574}
+  move: 0
+  count: 0
+  movementspeed: 5
+  jitter: 10
 --- !u!114 &114979141247440552
 MonoBehaviour:
   m_ObjectHideFlags: 1
