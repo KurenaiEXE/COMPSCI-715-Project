@@ -13,7 +13,8 @@ namespace VRStandardAssets.Examples
         [SerializeField] private Material m_DoubleClickedMaterial;         
         [SerializeField] private VRInteractiveItem m_InteractiveItem;
         [SerializeField] private Renderer m_Renderer;
-        public GameObject menu;
+        //public Initialisation init;
+        private GameObject menu;
 
         private void Awake ()
         {
@@ -60,10 +61,15 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show click state");
             m_Renderer.material = m_ClickedMaterial;
+            Debug.Log(menu == null);
+            //ToggleCanvas.ShowCanvas();
 
-            Instantiate(menu, new Vector3(-2, 1.5f, -2), Quaternion.Euler(0, -45, 0), this.transform);
+            //Instantiate(menu, new Vector3(-2, 1.5f, -2), Quaternion.Euler(0, -45, 0), this.transform);
+            //menu = Initialisation.menu;
+            //menu.SetActive(true);
+            //menu.GetComponent<Renderer>().enabled = false;
 
-            gameObject.GetComponent<Initialisation>().move = true;
+            //gameObject.GetComponent<Initialisation>().move = true;
         }
 
 
