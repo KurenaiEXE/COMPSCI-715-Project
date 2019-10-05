@@ -61,9 +61,10 @@ namespace VRStandardAssets.Examples
             Debug.Log("Show click state");
             m_Renderer.material = m_ClickedMaterial;
             menu.gameObject.GetComponent<MenuInitialisation>().block = this.gameObject;
-            Instantiate(menu, new Vector3(-2, 1.5f, -2), Quaternion.Euler(0, -45, 0));
-            
-
+            Instantiate(menu, new Vector3(0.4f, 2, -1.4f), Quaternion.Euler(0, -45, 0));
+            GameObject gesture = (GameObject)Resources.Load("Gestures/" + this.gameObject.name);
+            Instantiate(gesture, new Vector3(1.7f, 1.5f, -2.1f), Quaternion.Euler(0, 45, 0)).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            Instantiate(gesture, new Vector3(1.36f, 1.5f, -2.43f), Quaternion.Euler(0, -160, 0)).transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
         }
 
