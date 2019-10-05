@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class Initialisation : MonoBehaviour {
     public TextMeshPro A;
     public TextMeshPro B;
-    public bool move = false;
+    public bool move =false;
     public int count;
     public int movementspeed;
     public int jitter;
@@ -19,16 +19,14 @@ public class Initialisation : MonoBehaviour {
 	void Start () {
         string st = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         string c = st[Random.Range(0,st.Length)].ToString();
-        A.text = c;
+        A.text=c;
         B.text = c;
         this.name = c;
-        //ToggleCanvas.HideCanvas();
-        
-    }
+	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (move && count < 100) 
+        if (move && count < 20) 
         {
             float rotation = gameObject.transform.eulerAngles.y;
             Vector3 position = gameObject.transform.position;
