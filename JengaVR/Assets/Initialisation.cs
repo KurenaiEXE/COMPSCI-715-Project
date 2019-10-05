@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 
 public class Initialisation : MonoBehaviour {
@@ -11,6 +14,7 @@ public class Initialisation : MonoBehaviour {
     public int count;
     public int movementspeed;
     public int jitter;
+    public GameObject gameover;
 	// Use this for initialization
 	void Start () {
         string st = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -80,6 +84,14 @@ public class Initialisation : MonoBehaviour {
             }
             transform.Translate(transform.up * (Time.deltaTime * Random.Range(-jitter,jitter)));
             count += 1;
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(!move && Time.timeSinceLevelLoad > 5 && collision.gameObject.name == "Floor" )
+        {
+            Instantiate(gameover, new Vector3(0,0,0), Quaternion.Euler(0, 0, 0));
         }
     }
 }

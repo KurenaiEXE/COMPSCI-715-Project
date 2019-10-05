@@ -8,9 +8,8 @@ public class MenuInitialisation : MonoBehaviour {
     public GameObject block;
     // Use this for initialization
     void Start() {
-        var letter = transform.parent.GetComponent<Text>();
+        var letter = block.gameObject.name;
         A.text = A.text + letter;
-        this.block = block;
 	}
 	
 	// Update is called once per frame

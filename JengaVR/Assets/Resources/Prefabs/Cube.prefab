@@ -361,13 +361,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d755e68cd92c18147b4068496a88db4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NormalMaterial: {fileID: 2100000, guid: fdc3c11723354144dbf34cde07fed0b3, type: 2}
-  m_OverMaterial: {fileID: 2100000, guid: c7569fba9e0e2fc40b3de03cd2e6b6d8, type: 2}
-  m_ClickedMaterial: {fileID: 2100000, guid: d9e6a8c3b79a0ac4d8e9776bb25bfa16, type: 2}
-  m_DoubleClickedMaterial: {fileID: 2100000, guid: 6c24bafebfdd8d5409c9b756aad7b191,
+  m_NormalMaterial: {fileID: 2100000, guid: d9e6a8c3b79a0ac4d8e9776bb25bfa16, type: 2}
+  m_OverMaterial: {fileID: 2100000, guid: 5eb7ee7380c58854885d9b0c36e8972f, type: 2}
+  m_ClickedMaterial: {fileID: 2100000, guid: 5d6806ab6c681494e81a3e2d7de093a3, type: 2}
+  m_DoubleClickedMaterial: {fileID: 2100000, guid: cdd0f621478771b45b4fc5898d61191d,
     type: 2}
   m_InteractiveItem: {fileID: 114060116185979696}
   m_Renderer: {fileID: 23232500290085794}
+  menu: {fileID: 1782998263843964, guid: c415ff46fea0d5c43a303bb9d030479b, type: 2}
 --- !u!114 &114749487395332802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -385,6 +386,7 @@ MonoBehaviour:
   count: 0
   movementspeed: 5
   jitter: 10
+  gameover: {fileID: 1031287915842698, guid: 1f8a0ab1a09caf34fb18cb1e7d61d896, type: 2}
 --- !u!114 &114979141247440552
 MonoBehaviour:
   m_ObjectHideFlags: 1
