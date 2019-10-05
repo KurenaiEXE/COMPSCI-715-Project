@@ -368,7 +368,7 @@ MonoBehaviour:
     type: 2}
   m_InteractiveItem: {fileID: 114060116185979696}
   m_Renderer: {fileID: 23232500290085794}
-  menu: {fileID: 1782998263843964, guid: c415ff46fea0d5c43a303bb9d030479b, type: 2}
+  menu: {fileID: 1598827424383804, guid: 7e4936f25321fe94cbc96e398c5384c5, type: 2}
 --- !u!114 &114749487395332802
 MonoBehaviour:
   m_ObjectHideFlags: 1

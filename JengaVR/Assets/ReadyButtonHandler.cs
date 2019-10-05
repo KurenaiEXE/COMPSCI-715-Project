@@ -22,14 +22,16 @@ namespace VRStandardAssets.Examples
         private Renderer m_Renderer;
 
         public WebCamTexture wct;
-
-
+        public RawImage display;
         private void Awake()
         {
             m_Renderer.material = m_NormalMaterial;
             int currentCamIndex = 0;
             WebCamDevice device = WebCamTexture.devices[currentCamIndex];
             wct = new WebCamTexture(device.name, 400, 300, 12);
+            Debug.Log("found");
+            display.texture = wct;
+            Debug.Log("textujre)");
             wct.Play();
 
         }
