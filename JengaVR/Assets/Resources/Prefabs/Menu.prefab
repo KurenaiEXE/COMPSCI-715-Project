@@ -495,6 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   A: {fileID: 114937196184391072}
   block: {fileID: 0}
+  letter: 
 --- !u!114 &114189922361796764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -676,9 +677,15 @@ MonoBehaviour:
   wct: {fileID: 0}
   display: {fileID: 114838802565000880}
   pointer: {fileID: 0}
+  accept: 0
   totalTime: 2
   over: 0
   timer: 0
+  alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+  cancelButton: {fileID: 1951062822857122}
+  text: {fileID: 114937196184391072}
+  attempts: 0
+  accuracy: 0
   heightmap: {fileID: 0}
   size: {x: 100, y: 10, z: 100}
 --- !u!114 &114552507373224742
@@ -709,6 +716,11 @@ MonoBehaviour:
   m_DoubleClickedMaterial: {fileID: 0}
   m_InteractiveItem: {fileID: 114303077603360346}
   m_Renderer: {fileID: 23980327907333528}
+  pointer: {fileID: 0}
+  totalTime: 2
+  over: 0
+  timer: 0
+  readybutton: {fileID: 1451354079393190}
 --- !u!114 &114838802565000880
 MonoBehaviour:
   m_ObjectHideFlags: 1

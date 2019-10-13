@@ -102,6 +102,7 @@ namespace VRStandardAssets.Examples
             if (!readybutton.GetComponent<ReadyButtonHandler>().accept)
             {
                 readybutton.GetComponent<ReadyButtonHandler>().wct.Stop();
+                Destroy(GameObject.FindWithTag("Gesture"));
                 Destroy(transform.parent.gameObject);
             }
             else

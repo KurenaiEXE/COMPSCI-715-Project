@@ -369,6 +369,11 @@ MonoBehaviour:
   m_InteractiveItem: {fileID: 114060116185979696}
   m_Renderer: {fileID: 23232500290085794}
   menu: {fileID: 1598827424383804, guid: 7e4936f25321fe94cbc96e398c5384c5, type: 2}
+  pointer: {fileID: 0}
+  totalTime: 2
+  over: 0
+  timer: 0
+  gesture: {fileID: 1903411901547708, guid: 7c0a7730fec0f5441adad02566eedea8, type: 2}
 --- !u!114 &114749487395332802
 MonoBehaviour:
   m_ObjectHideFlags: 1
