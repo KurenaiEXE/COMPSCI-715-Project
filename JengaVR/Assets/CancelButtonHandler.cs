@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using VRStandardAssets.Utils;
+using UnityEngine.UI;
+using System.Linq;
+using TMPro;
 
 namespace VRStandardAssets.Examples
 {
@@ -19,6 +22,29 @@ namespace VRStandardAssets.Examples
         private VRInteractiveItem m_InteractiveItem;
         [SerializeField]
         private Renderer m_Renderer;
+
+        public GameObject pointer;
+        public float totalTime = 2;
+        public bool over;
+        public float timer;
+        public GameObject readybutton;
+
+        private void Start()
+        {
+            pointer = GameObject.Find("Canvas/Image");
+        }
+        private void Update()
+        {
+            if (over)
+            {
+                timer += Time.deltaTime;
+                pointer.GetComponent<Image>().fillAmount = 1 - timer / totalTime;
+            }
+            if (timer > totalTime)
+            {
+                HandleClick();
+            }
+        }
 
         private void Awake()
         {
@@ -47,6 +73,7 @@ namespace VRStandardAssets.Examples
         //Handle the Over event
         private void HandleOver()
         {
+            over = true;
             Debug.Log("Show over state");
             m_Renderer.material = m_OverMaterial;
         }
@@ -57,6 +84,10 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show out state");
             m_Renderer.material = m_NormalMaterial;
+            pointer.GetComponent<Image>().fillAmount = 1;
+            timer = 0;
+            over = false;
+
         }
 
 
@@ -65,7 +96,35 @@ namespace VRStandardAssets.Examples
         {
             Debug.Log("Show click state");
             m_Renderer.material = m_ClickedMaterial;
-            Destroy(transform.parent.gameObject);
+            pointer.GetComponent<Image>().fillAmount = 1;
+            timer = 0;
+            over = false;
+            if (!readybutton.GetComponent<ReadyButtonHandler>().accept)
+            {
+                readybutton.GetComponent<ReadyButtonHandler>().wct.Stop();
+                Destroy(transform.parent.gameObject);
+            }
+            else
+            {
+                ReadyButtonHandler readyScript = readybutton.GetComponent<ReadyButtonHandler>();
+
+                readyScript.attempts += 1;
+                readyScript.TakeSnapshot();
+                string[] recognitionResultsString = readyScript.GestureRecognition();
+                Debug.Log(string.Join(",", recognitionResultsString));
+
+                float[] recognitionResults = new float[recognitionResultsString.Length];
+                for (int i = 0; i < recognitionResultsString.Length; i++)
+                {
+                    recognitionResults[i] = float.Parse(recognitionResultsString[i]);
+                }
+                int maxIndex = recognitionResults.ToList().IndexOf(recognitionResults.Max());
+                string letter = transform.parent.gameObject.GetComponent<MenuInitialisation>().letter;
+                readyScript.accuracy = recognitionResults[readyScript.alphabet.IndexOf(letter)];
+                GameObject.Find("Canvas/Panel/Accuracy").gameObject.GetComponent<Accuracy>().accuracy = Mathf.RoundToInt(readyScript.accuracy * 100);
+                GameObject.Find("Canvas/Panel/Attempts").gameObject.GetComponent<Attempts>().attempts = readyScript.attempts;
+                readyScript.text.GetComponent<TextMeshPro>().text = "The gesture you have performed is:" + readyScript.alphabet[maxIndex] ;
+            }  
 
         }
 

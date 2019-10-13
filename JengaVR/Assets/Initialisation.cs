@@ -17,7 +17,7 @@ public class Initialisation : MonoBehaviour {
     public GameObject gameover;
 	// Use this for initialization
 	void Start () {
-        string st = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string st = "ABCDEFGHI";
         string c = st[Random.Range(0,st.Length)].ToString();
         A.text=c;
         B.text = c;

@@ -6,9 +6,10 @@ using TMPro;
 public class MenuInitialisation : MonoBehaviour {
     public TextMeshPro A;
     public GameObject block;
+    public string letter;
     // Use this for initialization
     void Start() {
-        var letter = block.gameObject.name;
+        letter = block.gameObject.name;
         A.text = A.text + letter;
 	}
 	

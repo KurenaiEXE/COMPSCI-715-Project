@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Points : MonoBehaviour {
     public int points;
@@ -13,6 +14,6 @@ public class Points : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.GetComponent<Text>().text = "Points: " + points;
+        gameObject.GetComponent<TextMeshProUGUI>().text = "Points: " + points;
     }
 }

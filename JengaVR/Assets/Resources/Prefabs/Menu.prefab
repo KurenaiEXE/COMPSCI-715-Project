@@ -675,6 +675,10 @@ MonoBehaviour:
   m_Renderer: {fileID: 23849916486914422}
   wct: {fileID: 0}
   display: {fileID: 114838802565000880}
+  pointer: {fileID: 0}
+  totalTime: 2
+  over: 0
+  timer: 0
   heightmap: {fileID: 0}
   size: {x: 100, y: 10, z: 100}
 --- !u!114 &114552507373224742
