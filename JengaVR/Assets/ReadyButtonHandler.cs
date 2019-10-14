@@ -143,7 +143,9 @@ namespace VRStandardAssets.Examples
    
                 wct.Stop();
                 transform.parent.gameObject.GetComponent<MenuInitialisation>().block.gameObject.GetComponent<Initialisation>().move = true;
+                transform.parent.gameObject.GetComponent<MenuInitialisation>().block.gameObject.GetComponent<Initialisation>().jitter = Mathf.RoundToInt((1 - accuracy) * 20);
                 GameObject.Find("Canvas/Panel/Points").gameObject.GetComponent<Points>().points += Mathf.RoundToInt(100 * accuracy*(1-(float)attempts/MAX_ATTEMPTS)) ;
+
                 Destroy(GameObject.FindWithTag("Gesture"));
                 Destroy(transform.parent.gameObject);
             }
