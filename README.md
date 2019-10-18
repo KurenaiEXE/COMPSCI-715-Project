@@ -1,7 +1,7 @@
-#README
+# README
 The Unity project for the Jenga VR is in JengaVR folder
 
-##Setting up hand gesture pipeline system
+## Setting up hand gesture pipeline system
 1. Install Python 3.6 (can be downloaded online)
 2. Open Command Prompt
 3. Run "install pip" for keras, flask, tensorflow
