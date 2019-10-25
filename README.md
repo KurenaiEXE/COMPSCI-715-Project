@@ -1,5 +1,23 @@
-# README
-The Unity project for the Jenga VR is in JengaVR folder
+# JengASL: Sign Language Learning using VR Jenga Game
+Project repo for the JengASL software.
+The `GestureRecognition` directory holds all python scripts for ML part, and the `JengaVR` directory is the main unity project.
+
+## Project Directory
+ COMPSCI-715-Project
+  |- .vs : Visual Studio specific files
+  |   |- Jenga VR
+  |       |- (miscs)
+  |
+  |- Hand Models Blender
+  |   |- Rigged_Hand_blend : textures and miscs
+  |   |- alphabet : holds blender files, obj files of ASL alphabet hand gesture models
+  |
+  |- GestureRecognition
+  |   |- cnnServer.py : A simple web server python script
+  |   |- imageDetector.ipynb : A python script in jupyter-notebook format for ML model training and testing
+  |
+  |- JengaVR : A main unity project directory
+  |- __pycache__ : (miscs)
 
 ## Setting up hand gesture pipeline system
 1. Install Python 3.6 (can be downloaded online)
