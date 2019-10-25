@@ -3,6 +3,7 @@ Project repo for the JengASL software.
 The `GestureRecognition` directory holds all python scripts for ML part, and the `JengaVR` directory is the main unity project.
 
 ## Project Directory
+```
  COMPSCI-715-Project
   |- .vs : Visual Studio specific files
   |   |- Jenga VR
@@ -18,6 +19,7 @@ The `GestureRecognition` directory holds all python scripts for ML part, and the
   |
   |- JengaVR : A main unity project directory
   |- __pycache__ : (miscs)
+  ```
 
 ## Setting up hand gesture pipeline system
 1. Install Python 3.6 (can be downloaded online)
